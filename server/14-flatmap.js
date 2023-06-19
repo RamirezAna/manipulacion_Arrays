@@ -4,7 +4,7 @@ const users = [
     { userId: 3, username: "Nico", attributes: ["Nice", "Cool"]},
   ]; 
 
-  //ejemplo 1
+//ejemplo 1
 const rta= users.map(user => user.attributes).flat();
 console.log('map-flat', rta);
 
@@ -46,6 +46,36 @@ const rta3= Object.values(calendars).flatMap(item => {
 });
  
 console.log('flatMap-calendars', rta3);
+
+
+/*RETO*/
+// En este desafío tienes array de strings y cada línea es un fragmento, el Zen de Python, tu reto es hacer un método 
+// que retorne el número de palabras totales que tiene el array.
+// Para solucionarlo vas a encontrar una función llamada countWords que tiene un parámetro de entrada:
+// array: Un array de frases
+// Dentro del cuerpo de la función countWords debes escribir tu solución.
+// Ejemplo:
+// Input: [
+//   "Beautiful is better than ugly",
+//   "Explicit is better than implicit",
+//   "Simple is better than complex",
+//   "Complex is better than complicated",
+// ]
+
+
+const array = 
+    [
+    "Beautiful is better than ugly",
+    "Explicit is better than implicit",
+    "Simple is better than complex",
+    "Complex is better than complicated",
+  ];
+
+  function contar(array){
+    return cuenta= array.flatMap(item => item.split(' ')).length;
+}
+
+  console.log('contar', contar(array));
 
 
 
